@@ -4,7 +4,14 @@ import CartContainer from './CartContainer'
 
 const App = () => (
   <div>
-    <h2>Shopping Cart Example</h2>
+    <div style={{display: 'table'}}>
+      <div style={{display: 'table-cell'}}>
+        <h2>Quote Details</h2>
+      </div>
+      <div style={{display: 'table-cell'}}>
+        <h2>Amend Quote</h2>
+      </div>
+    </div>
     <hr/>
     <ProductsContainer />
     <hr/>

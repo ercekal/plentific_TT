@@ -1,15 +1,18 @@
-import React from 'react'
+import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Product from './Product'
+import ProductEdit from './ProductEdit'
 
 const ProductItem = ({ product, onAddToCartClicked }) => (
   <div style={{ marginBottom: 20 }}>
     <Product
       title={product.title}
-      price={product.price} />
+      price={product.price}
+    />
     <button
-      onClick={onAddToCartClicked}>
-      Add to cart
+      // onClick={onAddToCartClicked}
+      >
+      Edit quote
     </button>
   </div>
 )

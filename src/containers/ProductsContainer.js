@@ -5,6 +5,7 @@ import { addToCart } from '../actions'
 import { getVisibleProducts } from '../reducers/products'
 import ProductItem from '../components/ProductItem'
 import ProductsList from '../components/ProductsList'
+import ProductEdit from '../components/ProductEdit'
 
 const ProductsContainer = ({ products, addToCart }) => (
 
@@ -14,6 +15,11 @@ const ProductsContainer = ({ products, addToCart }) => (
         key={product.id}
         product={product}
         onAddToCartClicked={() => addToCart(product.id)} />
+    )}
+    {products.map(product =>
+      <ProductEdit
+        key={product.id}
+        product={product} />
     )}
   </ProductsList>
 )

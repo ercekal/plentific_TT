@@ -11,6 +11,12 @@ export const getAllProducts = () => dispatch => {
     dispatch(receiveProducts(products))
   })
 }
+export const productUpdate = ({ prop, value }) => {
+  return {
+    type: types.PRODUCT_UPDATE,
+    payload: { prop, value}
+  }
+}
 
 const addToCartUnsafe = productId => ({
   type: types.ADD_TO_CART,
