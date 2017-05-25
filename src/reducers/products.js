@@ -3,9 +3,9 @@ import { RECEIVE_PRODUCTS, ADD_TO_CART, PRODUCT_UPDATE } from '../constants/Acti
 
 const products = (state, action) => {
   switch (action.type) {
-    case ADD_TO_CART:
+    case PRODUCT_UPDATE:
       return {
-        ...state,
+        ...state, [action.payload.prop]: action.payload.value
       }
     default:
       return state

@@ -16,7 +16,7 @@ class ProductCreate extends Component {
       <div>
         <ProductForm {...this.props} />
         <div>
-          <button onPress={this.onButtonPress.bind(this)}>
+          <button onClick={this.onButtonPress.bind(this)}>
             Create Item
           </button>
         </div>

@@ -9,6 +9,9 @@ const ProductItem = ({ product, onAddToCartClicked }) => (
       title={product.title}
       price={product.price}
     />
+    <ProductEdit
+      product={product}
+    />
     <button
       // onClick={onAddToCartClicked}
       >

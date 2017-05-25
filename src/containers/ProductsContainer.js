@@ -5,7 +5,6 @@ import { addToCart } from '../actions'
 import { getVisibleProducts } from '../reducers/products'
 import ProductItem from '../components/ProductItem'
 import ProductsList from '../components/ProductsList'
-import ProductEdit from '../components/ProductEdit'
 
 const ProductsContainer = ({ products, addToCart }) => (
 
@@ -16,11 +15,6 @@ const ProductsContainer = ({ products, addToCart }) => (
         product={product}
         onAddToCartClicked={() => addToCart(product.id)} />
     )}
-    {products.map(product =>
-      <ProductEdit
-        key={product.id}
-        product={product} />
-    )}
   </ProductsList>
 )
 
@@ -29,7 +23,6 @@ ProductsContainer.propTypes = {
     title: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
   })).isRequired,
-  addToCart: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => ({

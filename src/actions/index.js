@@ -18,6 +18,9 @@ export const productUpdate = ({ prop, value }) => {
   }
 }
 
+export const productSave = ({ prop, value }) => {
+}
+
 const addToCartUnsafe = productId => ({
   type: types.ADD_TO_CART,
   productId

@@ -12,7 +12,7 @@ class ProductEdit extends Component {
     });
   }
   onButtonPress() {
-    const { title, price } = this.props;
+    const { title, price} = this.props;
 
     this.props.productSave({ title, price });
   }
@@ -21,7 +21,7 @@ class ProductEdit extends Component {
     return (
       <div>
         <ProductForm />
-        <button onPress={this.onButtonPress.bind(this)} >
+        <button onClick={this.onButtonPress.bind(this)} >
           Save Changes
         </button>
       </div>
@@ -29,11 +29,12 @@ class ProductEdit extends Component {
   }
 }
 
-ProductEdit.propTypes = {
-  product: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-  })).isRequired,
+const mapStateToProps = (state) => {
+  const { title, price } = state.products;
+
+  return { title, price };
 }
 
-export default ProductEdit
+export default connect(mapStateToProps, {
+  productUpdate, productSave
+})(ProductEdit);

@@ -5,10 +5,12 @@ const Input = ({ label, value, onChangeText }) => {
   return (
     <div>
       <p>{label}</p>
-      <input
-        value={value}
-        onChangeText={onChangeText}
-      />
+      <form>
+        <input
+          value={value}
+          onChangeText={onChangeText}
+        />
+      </form>
     </div>
   )
 };
