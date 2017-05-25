@@ -8,13 +8,6 @@ import ProductsList from '../components/ProductsList'
 
 const ProductsContainer = ({ products, addToCart }) => (
 
-  constructor() {
-    super()
-    this.state: {
-      products: [],
-    }
-  }
-
   <ProductsList title="Products">
     {products.map(product =>
       <ProductItem

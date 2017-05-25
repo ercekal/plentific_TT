@@ -8,9 +8,8 @@ const ProductItem = ({ product, onAddToCartClicked }) => (
       title={product.title}
       price={product.price} />
     <button
-      onClick={onAddToCartClicked}
-      disabled={product.inventory > 0 ? '' : 'disabled'}>
-      {product.inventory > 0 ? 'Add to cart' : 'Sold Out'}
+      onClick={onAddToCartClicked}>
+      Add to cart
     </button>
   </div>
 )
@@ -19,7 +18,6 @@ ProductItem.propTypes = {
   product: PropTypes.shape({
     title: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    inventory: PropTypes.number.isRequired
   }).isRequired,
   onAddToCartClicked: PropTypes.func.isRequired
 }

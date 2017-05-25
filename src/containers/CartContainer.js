@@ -17,7 +17,6 @@ CartContainer.propTypes = {
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    quantity: PropTypes.number.isRequired
   })).isRequired,
   total: PropTypes.string,
   checkout: PropTypes.func.isRequired
