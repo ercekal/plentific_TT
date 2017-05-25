@@ -1,0 +1,6 @@
+[
+  {"id": 1, "title": "Tequila", "price": 1200.00, "inventory": 2},
+  {"id": 2, "title": "Salt", "price": 12.00, "inventory": 10},
+  {"id": 3, "title": "Lemon", "price": 240.00, "inventory": 5},
+  {"id": 4, "title": "Bartender", "price": 345.60, "inventory": 5}
+]
